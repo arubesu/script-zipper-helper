@@ -2,7 +2,7 @@
 Repositório com um script simples em python para automatizar os pacotes de ZIP utilizados para fazer deploy em servidores SQL.
 
 
-#How to use 
+# How to use 
 No arquivo settings.json, altere os nomes dos servidores de banco de dados  e o database,
 
 
