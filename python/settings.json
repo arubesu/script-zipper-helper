@@ -1,0 +1,12 @@
+{
+  "filename": "Roteiro_Execucao_BD.csv",
+  "encoding": "cp1252",
+  "servers": [
+    "SERVER1",
+    "SERVER2",
+    "SERVER3",
+    "SERVER4"
+  ],
+  "database": "DATABASE_NAME",
+  "scriptsPath": "../scripts"
+}
