@@ -30,7 +30,6 @@ def load_scripts(scripts_path):
 
 def create_csv_file(config, server):
     scripts_path = path_from_abs(config['scriptsPath'])
-    print('scripts_path =====  {} '.format(scripts_path))
     scripts = load_scripts(scripts_path)
     output_dir = Path(
         '{scripts_path}/{filename}'.format(filename=config['filename'], scripts_path=scripts_path))
@@ -47,7 +46,6 @@ def create_csv_file(config, server):
 
 
 def get_all_file_paths(directory):
-    print(directory)
     file_paths = []
     for root, directories, files in os.walk(directory):
         for filename in files:
@@ -62,10 +60,8 @@ def zip_files(scripts_path, server):
     file_paths = get_all_file_paths(scripts_path)
     print('The following Files will be zipped:')
     for path in file_paths:
-        print(path)
-
-    zip_filename = Path(
-        '{scripts_path}/{server}.zip'.format(server=server, scripts_path=scripts_path))
+        zip_filename = Path(
+            '{scripts_path}/{server}.zip'.format(server=server, scripts_path=scripts_path))
     with ZipFile(zip_filename, 'w') as zip:
         for file in file_paths:
             filename = file[file.rfind(path_separator) + 1:]
